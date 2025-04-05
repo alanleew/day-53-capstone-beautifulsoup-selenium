@@ -11,3 +11,4 @@ soup = BeautifulSoup(webpage, features="html.parser")
 addresses = [address.text.strip() for address in soup.find_all("address")]
 prices = [price.text.split('/')[0].split("+")[0] for price in soup.find_all("span", class_="PropertyCardWrapper__StyledPriceLine")]
 links = [a["href"] for a in soup.css.select("article div div div a")]
+
